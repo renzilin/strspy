@@ -1,0 +1,78 @@
+##fileformat=VCFv4.3
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20210615
+##source=/stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/xatlas v0.2.1
+##reference=/stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa
+##command=/stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/xatlas -r /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa -i /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-1.minimap.sorted.bam_alignment.sorted.bam -s /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-1.minimap.sorted.bam -p /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-1.minimap.sorted.bam
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Phred-scaled Genotype Likelihood Scores">
+##FORMAT=<ID=RR,Number=1,Type=Integer,Description="Reference Read Depth">
+##FORMAT=<ID=VR,Number=1,Type=Integer,Description="Major Variant Read Depth">
+##FILTER=<ID=low_snpqual,Description="SNP logistic regression P-value is less than 0.5">
+##FILTER=<ID=low_VariantReads,Description="Variant read depth is less than 2">
+##FILTER=<ID=low_VariantRatio,Description="Variant read ratio is less than PL cutoff">
+##FILTER=<ID=low_coverage,Description="Total coverage is less than 6">
+##FILTER=<ID=high_coverage,Description="Total coverage is greater than 8000">
+##FILTER=<ID=single_strand,Description="All variant reads are in a single strand direction">
+##FILTER=<ID=No_data,Description="No valid reads on this site">
+##FILTER=<ID=No_var,Description="No valid variants reads on this site">
+##INFO=<ID=P,Number=1,Type=Float,Description="SNP p-value">
+##INFO=<ID=equal_majority,Number=0,Type=Flag,Description="The called SNP has an equal number of reads indicating another variant call and base was chosen by highest summed quality score">
+##contig=<ID=vWA_[TAGA]7_[CAGA]3_TAGA_11,length=1044>
+##contig=<ID=vWA_[TAGA]7_[CAGA]4_TAGA_12,length=1048>
+##contig=<ID=vWA_[TAGA]8_[CAGA]4_TAGA_13,length=1052>
+##contig=<ID=vWA_[TAGA]9_[CAGA]3_TAGA_13,length=1052>
+##contig=<ID=vWA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_14,length=1056>
+##contig=<ID=vWA_[TAGA]9_[CAGA]4_TAGA_14,length=1056>
+##contig=<ID=vWA_[TAGA]10_[CAGA]3_TAGA_14,length=1056>
+##contig=<ID=vWA_[TAGA]10_[CAGA]4_TAGA_15,length=1060>
+##contig=<ID=vWA_[TAGA]11_[CAGA]3_TAGA_15,length=1060>
+##contig=<ID=vWA_TGGA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_15,length=1060>
+##contig=<ID=vWA_[TAGA]11_[CAGA]4_TAGA_16,length=1064>
+##contig=<ID=vWA_[TAGA]12_[CAGA]3_TAGA_16,length=1064>
+##contig=<ID=vWA_[TAGA]12_[CAGA]4_TAGA_17,length=1068>
+##contig=<ID=vWA_[TAGA]13_[CAGA]3_TAGA_17,length=1068>
+##contig=<ID=vWA_[TAGA]11_[CAGA]5_TAGA_17,length=1068>
+##contig=<ID=vWA_[TAGA]13_[CAGA]4_17,length=1068>
+##contig=<ID=vWA_[TAGA]13_[CAGA]4_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]14_[CAGA]3_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]11_[CAGA]6_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]12_[CAGA]5_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]14_[CAGA]4_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]12_[CAGA]6_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]13_[CAGA]5_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]15_[CAGA]3_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]15_[CAGA]4_TAGA_20,length=1080>
+##contig=<ID=vWA_[TAGA]14_[CAGA]5_TAGA_20,length=1080>
+##contig=<ID=vWA_[TAGA]13_[CAGA]6_TAGA_20,length=1080>
+##contig=<ID=vWA_[TAGA]15_[CAGA]4_TAGT_20,length=1080>
+##contig=<ID=vWA_[TAGA]14_[CAGA]6_TAGA_21,length=1084>
+##contig=<ID=vWA_[TAGA]15_[CAGA]5_TAGA_21,length=1084>
+##contig=<ID=vWA_[TAGA]16_[CAGA]4_TAGA_21,length=1084>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	/stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-1.minimap.sorted.bam
+vWA_[TAGA]11_[CAGA]3_TAGA_15	568	.	A	T	2	low_snpqual;low_coverage;low_VariantReads	P=0.387283	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]11_[CAGA]4_TAGA_16	478	.	C	T	3	low_VariantReads	P=0.52576	GT:VR:RR:DP:GQ:PL	0/1:2:4:6:.:12,0,99
+vWA_[TAGA]11_[CAGA]4_TAGA_16	655	.	T	C	2	low_snpqual;low_VariantReads	P=0.403225	GT:VR:RR:DP:GQ:PL	0/1:2:4:6:.:12,0,99
+vWA_[TAGA]12_[CAGA]4_TAGA_17	472	.	T	G	9	low_coverage;low_VariantReads	P=0.877829	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+vWA_[TAGA]12_[CAGA]4_TAGA_17	473	.	A	C	10	low_coverage;low_VariantReads	P=0.888273	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+vWA_[TAGA]12_[CAGA]4_TAGA_17	621	.	C	T	3	low_VariantReads	P=0.539497	GT:VR:RR:DP:GQ:PL	0/1:2:4:6:.:12,0,99
+vWA_[TAGA]11_[CAGA]5_TAGA_17	545	.	C	T	11	low_coverage;low_VariantReads	P=0.927031	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]13_[CAGA]4_17	505	.	T	C	5	low_coverage;low_VariantReads	P=0.661093	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]14_[CAGA]3_TAGA_18	550	.	A	G	7	PASS	P=0.778095	GT:VR:RR:DP:GQ:PL	0/1:6:10:16:.:97,0,242
+vWA_[TAGA]12_[CAGA]5_TAGA_18	550	.	A	T	1	low_snpqual;low_coverage;low_VariantReads	P=0.271532	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]5_TAGA_18	570	.	A	G	1	low_snpqual;low_coverage;low_VariantReads	P=0.257436	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]5_TAGA_18	571	.	G	A	1	low_snpqual;low_coverage;low_VariantReads	P=0.2542	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]5_TAGA_18	629	.	G	A	3	low_snpqual;low_coverage;low_VariantReads	P=0.44587	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]6_TAGA_19	506	.	A	G	2	low_snpqual;low_coverage;low_VariantReads	P=0.298573	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]6_TAGA_19	507	.	G	A	2	low_snpqual;low_coverage;low_VariantReads	P=0.300881	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]6_TAGA_19	510	.	A	G	1	low_snpqual;low_coverage;low_VariantReads	P=0.286325	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]6_TAGA_19	511	.	G	A	1	low_snpqual;low_coverage;low_VariantReads	P=0.255412	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]12_[CAGA]6_TAGA_19	552	.	A	T	1	low_snpqual;low_coverage;low_VariantReads	P=0.280747	GT:VR:RR:DP:GQ:PL	1/1:2:0:2:.:27,3,0
+vWA_[TAGA]13_[CAGA]5_TAGA_19	574	.	A	G	3	low_VariantReads	P=0.531998	GT:VR:RR:DP:GQ:PL	0/1:2:6:8:.:6,0,151
+vWA_[TAGA]13_[CAGA]5_TAGA_19	575	.	G	A	8	low_VariantReads	P=0.82843	GT:VR:RR:DP:GQ:PL	0/1:2:6:8:.:6,0,151
+vWA_[TAGA]13_[CAGA]5_TAGA_19	624	.	C	T	2	low_snpqual;low_VariantReads	P=0.324468	GT:VR:RR:DP:GQ:PL	0/1:2:6:8:.:6,0,151
+vWA_[TAGA]13_[CAGA]5_TAGA_19	625	.	A	C	2	low_snpqual;low_VariantReads	P=0.313823;equal_majority	GT:VR:RR:DP:GQ:PL	0/1:2:4:6:.:12,0,99
+vWA_[TAGA]13_[CAGA]5_TAGA_19	679	.	T	C	2	low_snpqual;low_VariantReads	P=0.298508	GT:VR:RR:DP:GQ:PL	0/1:2:6:8:.:6,0,151
+vWA_[TAGA]15_[CAGA]4_TAGA_20	530	.	A	G	4	low_VariantReads	P=0.639441	GT:VR:RR:DP:GQ:PL	0/1:2:6:8:.:6,0,151

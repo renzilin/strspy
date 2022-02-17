@@ -1,0 +1,2 @@
+GenomicMapping	RegionsOverllaped	Ratio
+15800	987	6.24684(%)

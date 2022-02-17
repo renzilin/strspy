@@ -1,0 +1,89 @@
+##fileformat=VCFv4.3
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20210615
+##source=/stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/xatlas v0.2.1
+##reference=/stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa
+##command=/stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/xatlas -r /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa -i /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/FGA_cA_15-0.5-1.minimap.sorted.bam_alignment.sorted.bam -s /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-1.minimap.sorted.bam -p /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-1.minimap.sorted.bam
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Phred-scaled Genotype Likelihood Scores">
+##FORMAT=<ID=RR,Number=1,Type=Integer,Description="Reference Read Depth">
+##FORMAT=<ID=VR,Number=1,Type=Integer,Description="Major Variant Read Depth">
+##FILTER=<ID=low_qual,Description="Indel logistic regression P-value is less than 0.5">
+##FILTER=<ID=low_VariantReads,Description="Variant read depth is less than 2">
+##FILTER=<ID=low_VariantRatio,Description="Variant read ratio is less than 0.06">
+##FILTER=<ID=low_coverage,Description="Total coverage is less than 5">
+##FILTER=<ID=high_coverage,Description="Total coverage is greater than 8000">
+##FILTER=<ID=read_end_ratio,Description="Ratio of variants reads within 5 bp of read end is greater than 0.80">
+##FILTER=<ID=No_data,Description="No valid reads on this site">
+##FILTER=<ID=No_var,Description="No valid variants reads on this site">
+##INFO=<ID=P,Number=1,Type=Float,Description="Indel p-value">
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]9__AA_AAAA_[GAAA]3_16.2,length=1066>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]9__AGAA_AAAA_[GAAA]3_17,length=1068>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]10_AA_AAAA_[GAAA]3_17.2,length=1070>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]10_AGAA_AAAA_[GAAA]3_18,length=1072>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]11_AA_AAAA_[GAAA]3_18.2,length=1074>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]11_AGAA_AAAA_[GAAA]3_19,length=1076>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2,length=1078>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]12_AGAA_AAAA_[GAAA]3_20,length=1080>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_[GAAA]3_21,length=1084>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_GAAA_AAAA_GAAA_21,length=1084>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]14_AA_AAAA_[GAAA]3_21.2,length=1086>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]14_AGAA_AAAA_[GAAA]3_22,length=1088>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]8_AGAA_AAAA_[GAAA]3_22,length=1088>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]15_AA_AAAA_[GAAA]3_22.2,length=1090>
+##contig=<ID=FGA_[GGAA]2_GGAG_AAAG_AAG_[AAAG]13_AGAA_AAAA_[GAAA]3_22.3,length=1091>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_[GAAA]3_23,length=1092>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]9_AGAA_AAAA_[GAAA]3_23,length=1092>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_GAAA_GCAA_GAAA_23,length=1092>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]16_AA_AAAA_[GAAA]3_23.2,length=1094>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]11_AG_[AAAG]4_AGAA_AAAA_[GAAA]3_23.2,length=1094>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_[GAAA]3_24,length=1096>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_GAAA_GCAA_GAAA_24,length=1096>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]17_AA_AAAA_[GAAA]3_24.2,length=1098>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25,length=1100>
+##contig=<ID=FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]15_AGAA_AAAA_[GAAA]3_25,length=1100>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]18_AA_AAAA_[GAAA]3_25.2,length=1102>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]18_AGAA_AAAA_[GAAA]3_26,length=1104>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]12_AGAA_AAAA_[GAAA]3_26,length=1104>
+##contig=<ID=FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]16_AGAA_AAAA_[GAAA]3_26,length=1104>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]18_GGAA_AAAA_[GAAA]3_26,length=1104>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]19_AGAA_AAAA_[GAAA]3_27,length=1108>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]13_AGAA_AAAA_[GAAA]3_27,length=1108>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]14_AGAA_AAAA_[GAAA]3_28,length=1112>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]20_AGAA_AAAA_[GAAA]3_28,length=1112>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]15_AGAA_AAAA_[GAAA]3_29,length=1116>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]21_AGAA_AAAA_[GAAA]3_29,length=1116>
+##contig=<ID=FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]16_AGAA_AAAA_[GAAA]3_30,length=1120>
+##contig=<ID=FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]14_AA_AAAA_[GAAA]4_30.2,length=1122>
+##contig=<ID=FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]15_AA_AAAA_[GAAA]4_31.2,length=1126>
+##contig=<ID=FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]2_[AAAG]13_[ACAG]5_[AAAG]10_AA_AAAA_[GAAA]4_43.2,length=1174>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	/stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-1.minimap.sorted.bam
+FGA_[GGAA]2_GGAG_[AAAG]11_AGAA_AAAA_[GAAA]3_19	451	.	AGCT	A	2	low_coverage;low_qual	P=0.376941	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]11_AGAA_AAAA_[GAAA]3_19	590	.	A	ATG	2	low_coverage;low_qual	P=0.365136	GT:VR:RR:DP:GQ:PL	1/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2	431	.	G	GA	3	low_coverage;low_qual	P=0.490628	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2	463	.	AT	A	2	low_coverage;low_qual	P=0.321825	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2	482	.	C	CA	2	low_coverage;low_qual	P=0.388453	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2	552	.	GAAAGAAAGAAA	G	2	low_coverage;low_qual	P=0.37776	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2	579	.	CT	C	1	low_coverage;low_qual	P=0.271138	GT:VR:RR:DP:GQ:PL	1/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]12_AGAA_AAAA_[GAAA]3_20	482	.	CA	C	8	PASS	P=0.838263	GT:VR:RR:DP:GQ:PL	0/1:12:12:30:.:245,0,275
+FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_[GAAA]3_21	482	.	CA	C	6	PASS	P=0.770588	GT:VR:RR:DP:GQ:PL	0/1:34:72:110:.:630,0,1750
+FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_[GAAA]3_21	566	.	GA	G	2	low_qual	P=0.398279	GT:VR:RR:DP:GQ:PL	0/1:26:70:110:.:430,0,1722
+FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_GAAA_AAAA_GAAA_21	482	.	C	CA	1	low_qual	P=0.251065	GT:VR:RR:DP:GQ:PL	0/1:2:4:6:.:12,0,99
+FGA_[GGAA]2_GGAG_[AAAG]14_AA_AAAA_[GAAA]3_21.2	482	.	CA	C	3	PASS	P=0.551933	GT:VR:RR:DP:GQ:PL	0/1:8:14:26:.:137,0,338
+FGA_[GGAA]2_GGAG_[AAAG]14_AGAA_AAAA_[GAAA]3_22	482	.	CA	C	11	PASS	P=0.917114	GT:VR:RR:DP:GQ:PL	0/1:20:12:38:.:451,0,251
+FGA_[GGAA]2_GGAG_[AAAG]14_AGAA_AAAA_[GAAA]3_22	570	.	GA	G	6	PASS	P=0.75942	GT:VR:RR:DP:GQ:PL	0/1:14:24:38:.:261,0,577
+FGA_[GGAA]2_GGAG_[AAAG]15_AA_AAAA_[GAAA]3_22.2	482	.	CA	C	1	low_qual	P=0.278521	GT:VR:RR:DP:GQ:PL	0/1:2:2:6:.:18,0,48
+FGA_[GGAA]2_GGAG_AAAG_AAG_[AAAG]13_AGAA_AAAA_[GAAA]3_22.3	543	.	GA	G	1	low_qual	P=0.250267	GT:VR:RR:DP:GQ:PL	0/1:8:12:20:.:143,0,287
+FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_[GAAA]3_23	482	.	CA	C	4	PASS	P=0.562672	GT:VR:RR:DP:GQ:PL	0/1:18:44:74:.:304,0,1079
+FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_[GAAA]3_23	574	.	GA	G	2	low_qual	P=0.368285	GT:VR:RR:DP:GQ:PL	0/0:16:56:74:.:216,0,1393
+FGA_[GGAA]2_GGAG_[AAAG]16_AA_AAAA_[GAAA]3_23.2	482	.	C	CA	6	PASS	P=0.736542	GT:VR:RR:DP:GQ:PL	0/1:4:4:8:.:64,0,93
+FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_[GAAA]3_24	482	.	CAAAA	C	1	low_qual	P=0.288646	GT:VR:RR:DP:GQ:PL	0/1:4:4:10:.:64,0,93
+FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25	476	.	T	TAA	1	low_coverage;low_qual	P=0.257588	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25	482	.	CA	C	3	low_coverage;low_qual	P=0.459186	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25	497	.	G	GA	1	low_coverage;low_qual	P=0.25325	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25	504	.	A	AG	2	low_coverage;low_qual	P=0.392366	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25	514	.	AAG	A	2	low_coverage;low_qual	P=0.340586	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25	520	.	GA	G	1	low_coverage;low_qual	P=0.250555	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25	530	.	AAG	A	2	low_coverage;low_qual	P=0.385847	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48

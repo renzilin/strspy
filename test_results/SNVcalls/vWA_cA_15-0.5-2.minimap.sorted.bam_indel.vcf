@@ -1,0 +1,64 @@
+##fileformat=VCFv4.3
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20210615
+##source=/stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/xatlas v0.2.1
+##reference=/stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa
+##command=/stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/xatlas -r /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa -i /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-2.minimap.sorted.bam_alignment.sorted.bam -s /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-2.minimap.sorted.bam -p /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-2.minimap.sorted.bam
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Phred-scaled Genotype Likelihood Scores">
+##FORMAT=<ID=RR,Number=1,Type=Integer,Description="Reference Read Depth">
+##FORMAT=<ID=VR,Number=1,Type=Integer,Description="Major Variant Read Depth">
+##FILTER=<ID=low_qual,Description="Indel logistic regression P-value is less than 0.5">
+##FILTER=<ID=low_VariantReads,Description="Variant read depth is less than 2">
+##FILTER=<ID=low_VariantRatio,Description="Variant read ratio is less than 0.06">
+##FILTER=<ID=low_coverage,Description="Total coverage is less than 5">
+##FILTER=<ID=high_coverage,Description="Total coverage is greater than 8000">
+##FILTER=<ID=read_end_ratio,Description="Ratio of variants reads within 5 bp of read end is greater than 0.80">
+##FILTER=<ID=No_data,Description="No valid reads on this site">
+##FILTER=<ID=No_var,Description="No valid variants reads on this site">
+##INFO=<ID=P,Number=1,Type=Float,Description="Indel p-value">
+##contig=<ID=vWA_[TAGA]7_[CAGA]3_TAGA_11,length=1044>
+##contig=<ID=vWA_[TAGA]7_[CAGA]4_TAGA_12,length=1048>
+##contig=<ID=vWA_[TAGA]8_[CAGA]4_TAGA_13,length=1052>
+##contig=<ID=vWA_[TAGA]9_[CAGA]3_TAGA_13,length=1052>
+##contig=<ID=vWA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_14,length=1056>
+##contig=<ID=vWA_[TAGA]9_[CAGA]4_TAGA_14,length=1056>
+##contig=<ID=vWA_[TAGA]10_[CAGA]3_TAGA_14,length=1056>
+##contig=<ID=vWA_[TAGA]10_[CAGA]4_TAGA_15,length=1060>
+##contig=<ID=vWA_[TAGA]11_[CAGA]3_TAGA_15,length=1060>
+##contig=<ID=vWA_TGGA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_15,length=1060>
+##contig=<ID=vWA_[TAGA]11_[CAGA]4_TAGA_16,length=1064>
+##contig=<ID=vWA_[TAGA]12_[CAGA]3_TAGA_16,length=1064>
+##contig=<ID=vWA_[TAGA]12_[CAGA]4_TAGA_17,length=1068>
+##contig=<ID=vWA_[TAGA]13_[CAGA]3_TAGA_17,length=1068>
+##contig=<ID=vWA_[TAGA]11_[CAGA]5_TAGA_17,length=1068>
+##contig=<ID=vWA_[TAGA]13_[CAGA]4_17,length=1068>
+##contig=<ID=vWA_[TAGA]13_[CAGA]4_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]14_[CAGA]3_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]11_[CAGA]6_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]12_[CAGA]5_TAGA_18,length=1072>
+##contig=<ID=vWA_[TAGA]14_[CAGA]4_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]12_[CAGA]6_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]13_[CAGA]5_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]15_[CAGA]3_TAGA_19,length=1076>
+##contig=<ID=vWA_[TAGA]15_[CAGA]4_TAGA_20,length=1080>
+##contig=<ID=vWA_[TAGA]14_[CAGA]5_TAGA_20,length=1080>
+##contig=<ID=vWA_[TAGA]13_[CAGA]6_TAGA_20,length=1080>
+##contig=<ID=vWA_[TAGA]15_[CAGA]4_TAGT_20,length=1080>
+##contig=<ID=vWA_[TAGA]14_[CAGA]6_TAGA_21,length=1084>
+##contig=<ID=vWA_[TAGA]15_[CAGA]5_TAGA_21,length=1084>
+##contig=<ID=vWA_[TAGA]16_[CAGA]4_TAGA_21,length=1084>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	/stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-2.minimap.sorted.bam
+vWA_[TAGA]14_[CAGA]3_TAGA_18	668	.	TG	T	3	low_qual	P=0.497464	GT:VR:RR:DP:GQ:PL	1/1:8:8:16:.:155,0,184
+vWA_[TAGA]12_[CAGA]5_TAGA_18	664	.	CT	C	1	low_qual	P=0.276066	GT:VR:RR:DP:GQ:PL	0/1:2:4:6:.:12,0,99
+vWA_[TAGA]12_[CAGA]5_TAGA_18	675	.	TG	T	4	PASS	P=0.554848	GT:VR:RR:DP:GQ:PL	1/1:4:2:6:.:70,0,42
+vWA_[TAGA]14_[CAGA]4_TAGA_19	672	.	TG	T	1	low_qual	P=0.251286	GT:VR:RR:DP:GQ:PL	0/0:36:182:224:.:351,0,4569
+vWA_[TAGA]15_[CAGA]3_TAGA_19	471	.	AT	A	2	low_coverage;low_qual	P=0.316848	GT:VR:RR:DP:GQ:PL	1/1:2:2:4:.:18,0,48
+vWA_[TAGA]15_[CAGA]3_TAGA_19	545	.	TA	T	1	low_coverage;low_qual	P=0.279023	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+vWA_[TAGA]15_[CAGA]3_TAGA_19	633	.	GC	G	2	low_coverage;low_qual	P=0.301093	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+vWA_[TAGA]15_[CAGA]3_TAGA_19	665	.	C	CT	1	low_coverage;low_qual	P=0.286441	GT:VR:RR:DP:GQ:PL	0/1:2:2:4:.:18,0,48
+vWA_[TAGA]15_[CAGA]3_TAGA_19	670	.	TC	T	2	low_coverage;low_qual	P=0.32367	GT:VR:RR:DP:GQ:PL	1/1:2:2:4:.:18,0,48
+vWA_[TAGA]15_[CAGA]3_TAGA_19	672	.	T	TAA	1	low_coverage;low_qual	P=0.282039	GT:VR:RR:DP:GQ:PL	1/1:2:2:4:.:18,0,48
+vWA_[TAGA]15_[CAGA]3_TAGA_19	679	.	TG	T	2	low_coverage;low_qual	P=0.310184	GT:VR:RR:DP:GQ:PL	1/1:2:2:4:.:18,0,48

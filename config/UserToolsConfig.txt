@@ -1,0 +1,5 @@
+SAMTOOLS=/home/renz/miniconda3/envs/strspy/bin/samtools
+BEDTOOLS=/home/renz/miniconda3/envs/strspy/bin/bedtools
+XATLAS=/home/renz/miniconda3/envs/strspy/bin/xatlas
+PARALLEL=/home/renz/miniconda3/envs/strspy/bin/parallel
+MINIMAP=/home/renz/miniconda3/envs/strspy/bin/minimap2

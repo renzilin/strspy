@@ -9,6 +9,6 @@ dependencies:
   - parallel
 # bioconda channel installs
   - xatlas
-  - samtools
+  - samtools=1.12
   - bedtools
-  - minimap2
+  - minimap2=2.18

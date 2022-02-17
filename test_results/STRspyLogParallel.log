@@ -1,0 +1,481 @@
+========================================================
+Arguments are fine !! analysis proceeded..
+Analysis date and time: Tue Jun 15 12:01:40 CDT 2021
+========================================================
+Input read dir: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset
+Input type: bam
+Motif/STR fasta dir: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB
+Motif/STR bed dir: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB
+region_bed: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/all_regions/test.regions.sort.named.bed
+Output dir: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results
+genome ref fasta: NULL
+========================================================
+#Summerizing the mapped, unmapped reads and their percentage
+#Done
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#Spying on STR for a given samples....
+Working for: cA_15-0.5-1.minimap.sorted.bam FGA.bed
+#Started Intersecting regions from bed vs bam and creating fastq reads...
+#Done.
+
+#Mapping fastq to motif fasta...
+
+[M::mm_idx_gen::0.007*1.08] collected minimizers
+[M::mm_idx_gen::0.009*1.32] sorted minimizers
+[M::main::0.009*1.31] loaded/built the index for 40 target sequence(s)
+[M::mm_mapopt_update::0.009*1.29] mid_occ = 473
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 40
+[M::mm_idx_stat::0.009*1.27] distinct minimizers: 233 (6.44% are singletons); average occurrences: 36.034; average spacing: 5.226; total length: 43881
+[M::worker_pipeline::0.642*2.76] mapped 448 sequences
+[M::main] Version: 2.18-r1015
+[M::main] CMD: /stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/minimap2 --MD -L -ax map-ont -o /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/FGA_cA_15-0.5-1.minimap.sorted.bam_alignment.sam /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectedRegions/cA_15-0.5-1.minimap.sorted.bam_FGA.bed.bam.fq
+[M::main] Real time: 0.642 sec; CPU: 1.771 sec; Peak RSS: 0.015 GB
+#Done.
+
+#sam to bam + sort + index...
+#SNV calling by xatlas...
+
+Running xAtlas v0.2.1
+SNP Minimum coverage: 6
+SNP/INDEL High coverage: 8000
+SNP/INDEL Maximum coverage: 16383
+gVCF block absolute limit: 3
+gVCF block relative limit: 0.3
+gVCF block label: BLOCKAVG_min30p3a
+Input alignment file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/FGA_cA_15-0.5-1.minimap.sorted.bam_alignment.sorted.bam
+Reference file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa
+Sample name: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-1.minimap.sorted.bam
+Prefix: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-1.minimap.sorted.bam
+Minimum SNP read mapping quality: 1
+Minimum INDEL read mapping quality: 1
+Found 40 regions
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]9__AA_AAAA_[GAAA]3_16.2:1-1066
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]9__AGAA_AAAA_[GAAA]3_17:1-1068
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]10_AA_AAAA_[GAAA]3_17.2:1-1070
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]10_AGAA_AAAA_[GAAA]3_18:1-1072
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AA_AAAA_[GAAA]3_18.2:1-1074
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AGAA_AAAA_[GAAA]3_19:1-1076
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2:1-1078
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]12_AGAA_AAAA_[GAAA]3_20:1-1080
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_[GAAA]3_21:1-1084
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_GAAA_AAAA_GAAA_21:1-1084
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]14_AA_AAAA_[GAAA]3_21.2:1-1086
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]14_AGAA_AAAA_[GAAA]3_22:1-1088
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]8_AGAA_AAAA_[GAAA]3_22:1-1088
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AA_AAAA_[GAAA]3_22.2:1-1090
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAG_[AAAG]13_AGAA_AAAA_[GAAA]3_22.3:1-1091
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_[GAAA]3_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]9_AGAA_AAAA_[GAAA]3_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_GAAA_GCAA_GAAA_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AA_AAAA_[GAAA]3_23.2:1-1094
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AG_[AAAG]4_AGAA_AAAA_[GAAA]3_23.2:1-1094
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_[GAAA]3_24:1-1096
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_GAAA_GCAA_GAAA_24:1-1096
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]17_AA_AAAA_[GAAA]3_24.2:1-1098
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25:1-1100
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]15_AGAA_AAAA_[GAAA]3_25:1-1100
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_AA_AAAA_[GAAA]3_25.2:1-1102
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]12_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]16_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_GGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]19_AGAA_AAAA_[GAAA]3_27:1-1108
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]13_AGAA_AAAA_[GAAA]3_27:1-1108
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]14_AGAA_AAAA_[GAAA]3_28:1-1112
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]20_AGAA_AAAA_[GAAA]3_28:1-1112
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]15_AGAA_AAAA_[GAAA]3_29:1-1116
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]21_AGAA_AAAA_[GAAA]3_29:1-1116
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]16_AGAA_AAAA_[GAAA]3_30:1-1120
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]14_AA_AAAA_[GAAA]4_30.2:1-1122
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]15_AA_AAAA_[GAAA]4_31.2:1-1126
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]2_[AAAG]13_[ACAG]5_[AAAG]10_AA_AAAA_[GAAA]4_43.2:1-1174
+Finished
+#Counting Alleles...
+#Normalize with maximum value of Allele counts..
+#get top two Alleles by filtering norm value <= 0.4
+#Done.
+
+Working for: cA_15-0.5-1.minimap.sorted.bam vWA.bed
+#Started Intersecting regions from bed vs bam and creating fastq reads...
+#Done.
+
+#Mapping fastq to motif fasta...
+
+[M::mm_idx_gen::0.022*0.31] collected minimizers
+[M::mm_idx_gen::0.023*0.43] sorted minimizers
+[M::main::0.023*0.43] loaded/built the index for 31 target sequence(s)
+[M::mm_mapopt_update::0.024*0.42] mid_occ = 418
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 31
+[M::mm_idx_stat::0.024*0.42] distinct minimizers: 178 (2.25% are singletons); average occurrences: 33.725; average spacing: 5.515; total length: 33108
+[M::worker_pipeline::0.513*2.68] mapped 254 sequences
+[M::main] Version: 2.18-r1015
+[M::main] CMD: /stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/minimap2 --MD -L -ax map-ont -o /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-1.minimap.sorted.bam_alignment.sam /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectedRegions/cA_15-0.5-1.minimap.sorted.bam_vWA.bed.bam.fq
+[M::main] Real time: 0.513 sec; CPU: 1.374 sec; Peak RSS: 0.011 GB
+#Done.
+
+#sam to bam + sort + index...
+#SNV calling by xatlas...
+
+Running xAtlas v0.2.1
+SNP Minimum coverage: 6
+SNP/INDEL High coverage: 8000
+SNP/INDEL Maximum coverage: 16383
+gVCF block absolute limit: 3
+gVCF block relative limit: 0.3
+gVCF block label: BLOCKAVG_min30p3a
+Input alignment file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-1.minimap.sorted.bam_alignment.sorted.bam
+Reference file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa
+Sample name: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-1.minimap.sorted.bam
+Prefix: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-1.minimap.sorted.bam
+Minimum SNP read mapping quality: 1
+Minimum INDEL read mapping quality: 1
+Found 31 regions
+Processing records for region vWA_[TAGA]7_[CAGA]3_TAGA_11:1-1044
+Processing records for region vWA_[TAGA]7_[CAGA]4_TAGA_12:1-1048
+Processing records for region vWA_[TAGA]8_[CAGA]4_TAGA_13:1-1052
+Processing records for region vWA_[TAGA]9_[CAGA]3_TAGA_13:1-1052
+Processing records for region vWA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]9_[CAGA]4_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]10_[CAGA]3_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]10_[CAGA]4_TAGA_15:1-1060
+Processing records for region vWA_[TAGA]11_[CAGA]3_TAGA_15:1-1060
+Processing records for region vWA_TGGA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_15:1-1060
+Processing records for region vWA_[TAGA]11_[CAGA]4_TAGA_16:1-1064
+Processing records for region vWA_[TAGA]12_[CAGA]3_TAGA_16:1-1064
+Processing records for region vWA_[TAGA]12_[CAGA]4_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]3_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]11_[CAGA]5_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]4_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]4_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]14_[CAGA]3_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]11_[CAGA]6_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]12_[CAGA]5_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]14_[CAGA]4_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]12_[CAGA]6_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]13_[CAGA]5_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]15_[CAGA]3_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]15_[CAGA]4_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]14_[CAGA]5_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]13_[CAGA]6_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]15_[CAGA]4_TAGT_20:1-1080
+Processing records for region vWA_[TAGA]14_[CAGA]6_TAGA_21:1-1084
+Processing records for region vWA_[TAGA]15_[CAGA]5_TAGA_21:1-1084
+Processing records for region vWA_[TAGA]16_[CAGA]4_TAGA_21:1-1084
+Finished
+#Counting Alleles...
+#Normalize with maximum value of Allele counts..
+#get top two Alleles by filtering norm value <= 0.4
+#Done.
+
+Working for: cA_15-0.5-2.minimap.sorted.bam FGA.bed
+#Started Intersecting regions from bed vs bam and creating fastq reads...
+#Done.
+
+#Mapping fastq to motif fasta...
+
+[M::mm_idx_gen::0.005*0.93] collected minimizers
+[M::mm_idx_gen::0.006*1.10] sorted minimizers
+[M::main::0.006*1.10] loaded/built the index for 40 target sequence(s)
+[M::mm_mapopt_update::0.006*1.08] mid_occ = 473
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 40
+[M::mm_idx_stat::0.007*1.07] distinct minimizers: 233 (6.44% are singletons); average occurrences: 36.034; average spacing: 5.226; total length: 43881
+[M::worker_pipeline::1.153*2.83] mapped 896 sequences
+[M::main] Version: 2.18-r1015
+[M::main] CMD: /stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/minimap2 --MD -L -ax map-ont -o /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/FGA_cA_15-0.5-2.minimap.sorted.bam_alignment.sam /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectedRegions/cA_15-0.5-2.minimap.sorted.bam_FGA.bed.bam.fq
+[M::main] Real time: 1.153 sec; CPU: 3.259 sec; Peak RSS: 0.017 GB
+#Done.
+
+#sam to bam + sort + index...
+#SNV calling by xatlas...
+
+Running xAtlas v0.2.1
+SNP Minimum coverage: 6
+SNP/INDEL High coverage: 8000
+SNP/INDEL Maximum coverage: 16383
+gVCF block absolute limit: 3
+gVCF block relative limit: 0.3
+gVCF block label: BLOCKAVG_min30p3a
+Input alignment file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/FGA_cA_15-0.5-2.minimap.sorted.bam_alignment.sorted.bam
+Reference file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa
+Sample name: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-2.minimap.sorted.bam
+Prefix: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-2.minimap.sorted.bam
+Minimum SNP read mapping quality: 1
+Minimum INDEL read mapping quality: 1
+Found 40 regions
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]9__AA_AAAA_[GAAA]3_16.2:1-1066
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]9__AGAA_AAAA_[GAAA]3_17:1-1068
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]10_AA_AAAA_[GAAA]3_17.2:1-1070
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]10_AGAA_AAAA_[GAAA]3_18:1-1072
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AA_AAAA_[GAAA]3_18.2:1-1074
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AGAA_AAAA_[GAAA]3_19:1-1076
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2:1-1078
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]12_AGAA_AAAA_[GAAA]3_20:1-1080
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_[GAAA]3_21:1-1084
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_GAAA_AAAA_GAAA_21:1-1084
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]14_AA_AAAA_[GAAA]3_21.2:1-1086
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]14_AGAA_AAAA_[GAAA]3_22:1-1088
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]8_AGAA_AAAA_[GAAA]3_22:1-1088
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AA_AAAA_[GAAA]3_22.2:1-1090
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAG_[AAAG]13_AGAA_AAAA_[GAAA]3_22.3:1-1091
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_[GAAA]3_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]9_AGAA_AAAA_[GAAA]3_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_GAAA_GCAA_GAAA_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AA_AAAA_[GAAA]3_23.2:1-1094
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AG_[AAAG]4_AGAA_AAAA_[GAAA]3_23.2:1-1094
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_[GAAA]3_24:1-1096
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_GAAA_GCAA_GAAA_24:1-1096
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]17_AA_AAAA_[GAAA]3_24.2:1-1098
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25:1-1100
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]15_AGAA_AAAA_[GAAA]3_25:1-1100
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_AA_AAAA_[GAAA]3_25.2:1-1102
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]12_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]16_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_GGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]19_AGAA_AAAA_[GAAA]3_27:1-1108
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]13_AGAA_AAAA_[GAAA]3_27:1-1108
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]14_AGAA_AAAA_[GAAA]3_28:1-1112
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]20_AGAA_AAAA_[GAAA]3_28:1-1112
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]15_AGAA_AAAA_[GAAA]3_29:1-1116
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]21_AGAA_AAAA_[GAAA]3_29:1-1116
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]16_AGAA_AAAA_[GAAA]3_30:1-1120
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]14_AA_AAAA_[GAAA]4_30.2:1-1122
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]15_AA_AAAA_[GAAA]4_31.2:1-1126
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]2_[AAAG]13_[ACAG]5_[AAAG]10_AA_AAAA_[GAAA]4_43.2:1-1174
+Finished
+#Counting Alleles...
+#Normalize with maximum value of Allele counts..
+#get top two Alleles by filtering norm value <= 0.4
+#Done.
+
+Working for: cA_15-0.5-2.minimap.sorted.bam vWA.bed
+#Started Intersecting regions from bed vs bam and creating fastq reads...
+#Done.
+
+#Mapping fastq to motif fasta...
+
+[M::mm_idx_gen::0.004*1.00] collected minimizers
+[M::mm_idx_gen::0.005*1.18] sorted minimizers
+[M::main::0.005*1.18] loaded/built the index for 31 target sequence(s)
+[M::mm_mapopt_update::0.005*1.16] mid_occ = 418
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 31
+[M::mm_idx_stat::0.005*1.15] distinct minimizers: 178 (2.25% are singletons); average occurrences: 33.725; average spacing: 5.515; total length: 33108
+[M::worker_pipeline::0.946*2.77] mapped 636 sequences
+[M::main] Version: 2.18-r1015
+[M::main] CMD: /stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/minimap2 --MD -L -ax map-ont -o /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-2.minimap.sorted.bam_alignment.sam /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectedRegions/cA_15-0.5-2.minimap.sorted.bam_vWA.bed.bam.fq
+[M::main] Real time: 0.946 sec; CPU: 2.620 sec; Peak RSS: 0.013 GB
+#Done.
+
+#sam to bam + sort + index...
+#SNV calling by xatlas...
+
+Running xAtlas v0.2.1
+SNP Minimum coverage: 6
+SNP/INDEL High coverage: 8000
+SNP/INDEL Maximum coverage: 16383
+gVCF block absolute limit: 3
+gVCF block relative limit: 0.3
+gVCF block label: BLOCKAVG_min30p3a
+Input alignment file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-2.minimap.sorted.bam_alignment.sorted.bam
+Reference file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa
+Sample name: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-2.minimap.sorted.bam
+Prefix: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-2.minimap.sorted.bam
+Minimum SNP read mapping quality: 1
+Minimum INDEL read mapping quality: 1
+Found 31 regions
+Processing records for region vWA_[TAGA]7_[CAGA]3_TAGA_11:1-1044
+Processing records for region vWA_[TAGA]7_[CAGA]4_TAGA_12:1-1048
+Processing records for region vWA_[TAGA]8_[CAGA]4_TAGA_13:1-1052
+Processing records for region vWA_[TAGA]9_[CAGA]3_TAGA_13:1-1052
+Processing records for region vWA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]9_[CAGA]4_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]10_[CAGA]3_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]10_[CAGA]4_TAGA_15:1-1060
+Processing records for region vWA_[TAGA]11_[CAGA]3_TAGA_15:1-1060
+Processing records for region vWA_TGGA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_15:1-1060
+Processing records for region vWA_[TAGA]11_[CAGA]4_TAGA_16:1-1064
+Processing records for region vWA_[TAGA]12_[CAGA]3_TAGA_16:1-1064
+Processing records for region vWA_[TAGA]12_[CAGA]4_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]3_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]11_[CAGA]5_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]4_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]4_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]14_[CAGA]3_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]11_[CAGA]6_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]12_[CAGA]5_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]14_[CAGA]4_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]12_[CAGA]6_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]13_[CAGA]5_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]15_[CAGA]3_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]15_[CAGA]4_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]14_[CAGA]5_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]13_[CAGA]6_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]15_[CAGA]4_TAGT_20:1-1080
+Processing records for region vWA_[TAGA]14_[CAGA]6_TAGA_21:1-1084
+Processing records for region vWA_[TAGA]15_[CAGA]5_TAGA_21:1-1084
+Processing records for region vWA_[TAGA]16_[CAGA]4_TAGA_21:1-1084
+Finished
+#Counting Alleles...
+#Normalize with maximum value of Allele counts..
+#get top two Alleles by filtering norm value <= 0.4
+#Done.
+
+Working for: cA_15-0.5-3.minimap.sorted.bam FGA.bed
+#Started Intersecting regions from bed vs bam and creating fastq reads...
+#Done.
+
+#Mapping fastq to motif fasta...
+
+[M::mm_idx_gen::0.006*1.02] collected minimizers
+[M::mm_idx_gen::0.007*1.19] sorted minimizers
+[M::main::0.007*1.18] loaded/built the index for 40 target sequence(s)
+[M::mm_mapopt_update::0.007*1.17] mid_occ = 473
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 40
+[M::mm_idx_stat::0.007*1.16] distinct minimizers: 233 (6.44% are singletons); average occurrences: 36.034; average spacing: 5.226; total length: 43881
+[M::worker_pipeline::1.412*2.78] mapped 1132 sequences
+[M::main] Version: 2.18-r1015
+[M::main] CMD: /stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/minimap2 --MD -L -ax map-ont -o /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/FGA_cA_15-0.5-3.minimap.sorted.bam_alignment.sam /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectedRegions/cA_15-0.5-3.minimap.sorted.bam_FGA.bed.bam.fq
+[M::main] Real time: 1.413 sec; CPU: 3.926 sec; Peak RSS: 0.019 GB
+#Done.
+
+#sam to bam + sort + index...
+#SNV calling by xatlas...
+
+Running xAtlas v0.2.1
+SNP Minimum coverage: 6
+SNP/INDEL High coverage: 8000
+SNP/INDEL Maximum coverage: 16383
+gVCF block absolute limit: 3
+gVCF block relative limit: 0.3
+gVCF block label: BLOCKAVG_min30p3a
+Input alignment file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/FGA_cA_15-0.5-3.minimap.sorted.bam_alignment.sorted.bam
+Reference file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/FGA.fa
+Sample name: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-3.minimap.sorted.bam
+Prefix: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/FGA_cA_15-0.5-3.minimap.sorted.bam
+Minimum SNP read mapping quality: 1
+Minimum INDEL read mapping quality: 1
+Found 40 regions
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]9__AA_AAAA_[GAAA]3_16.2:1-1066
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]9__AGAA_AAAA_[GAAA]3_17:1-1068
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]10_AA_AAAA_[GAAA]3_17.2:1-1070
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]10_AGAA_AAAA_[GAAA]3_18:1-1072
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AA_AAAA_[GAAA]3_18.2:1-1074
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AGAA_AAAA_[GAAA]3_19:1-1076
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]12_AA_AAAA_[GAAA]3_19.2:1-1078
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]12_AGAA_AAAA_[GAAA]3_20:1-1080
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_[GAAA]3_21:1-1084
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]13_AGAA_AAAA_GAAA_AAAA_GAAA_21:1-1084
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]14_AA_AAAA_[GAAA]3_21.2:1-1086
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]14_AGAA_AAAA_[GAAA]3_22:1-1088
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]8_AGAA_AAAA_[GAAA]3_22:1-1088
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AA_AAAA_[GAAA]3_22.2:1-1090
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAG_[AAAG]13_AGAA_AAAA_[GAAA]3_22.3:1-1091
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_[GAAA]3_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]9_AGAA_AAAA_[GAAA]3_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]15_AGAA_AAAA_GAAA_GCAA_GAAA_23:1-1092
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AA_AAAA_[GAAA]3_23.2:1-1094
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]11_AG_[AAAG]4_AGAA_AAAA_[GAAA]3_23.2:1-1094
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_[GAAA]3_24:1-1096
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]16_AGAA_AAAA_GAAA_GCAA_GAAA_24:1-1096
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]17_AA_AAAA_[GAAA]3_24.2:1-1098
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]17_AGAA_AAAA_[GAAA]3_25:1-1100
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]15_AGAA_AAAA_[GAAA]3_25:1-1100
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_AA_AAAA_[GAAA]3_25.2:1-1102
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]12_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_AAAG_AAAC_[AAAG]16_AGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]18_GGAA_AAAA_[GAAA]3_26:1-1104
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]19_AGAA_AAAA_[GAAA]3_27:1-1108
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]13_AGAA_AAAA_[GAAA]3_27:1-1108
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]14_AGAA_AAAA_[GAAA]3_28:1-1112
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]20_AGAA_AAAA_[GAAA]3_28:1-1112
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]15_AGAA_AAAA_[GAAA]3_29:1-1116
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]21_AGAA_AAAA_[GAAA]3_29:1-1116
+Processing records for region FGA_[GGAA]2_GGAG_[AAAG]5_AAGG_[AAAG]16_AGAA_AAAA_[GAAA]3_30:1-1120
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]14_AA_AAAA_[GAAA]4_30.2:1-1122
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]3_[AAAG]15_AA_AAAA_[GAAA]4_31.2:1-1126
+Processing records for region FGA_[GGAA]4_GGAG_[AAAG]3_[GAAG]2_[AAAG]13_[ACAG]5_[AAAG]10_AA_AAAA_[GAAA]4_43.2:1-1174
+Finished
+#Counting Alleles...
+#Normalize with maximum value of Allele counts..
+#get top two Alleles by filtering norm value <= 0.4
+#Done.
+
+Working for: cA_15-0.5-3.minimap.sorted.bam vWA.bed
+#Started Intersecting regions from bed vs bam and creating fastq reads...
+#Done.
+
+#Mapping fastq to motif fasta...
+
+[M::mm_idx_gen::0.004*1.18] collected minimizers
+[M::mm_idx_gen::0.005*1.31] sorted minimizers
+[M::main::0.005*1.30] loaded/built the index for 31 target sequence(s)
+[M::mm_mapopt_update::0.005*1.29] mid_occ = 418
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 31
+[M::mm_idx_stat::0.006*1.27] distinct minimizers: 178 (2.25% are singletons); average occurrences: 33.725; average spacing: 5.515; total length: 33108
+[M::worker_pipeline::1.260*2.80] mapped 842 sequences
+[M::main] Version: 2.18-r1015
+[M::main] CMD: /stornext/snfs5/next-gen/scratch/rupesh/Apps/envs/strspy_env/bin/minimap2 --MD -L -ax map-ont -o /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-3.minimap.sorted.bam_alignment.sam /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectedRegions/cA_15-0.5-3.minimap.sorted.bam_vWA.bed.bam.fq
+[M::main] Real time: 1.260 sec; CPU: 3.526 sec; Peak RSS: 0.012 GB
+#Done.
+
+#sam to bam + sort + index...
+#SNV calling by xatlas...
+
+Running xAtlas v0.2.1
+SNP Minimum coverage: 6
+SNP/INDEL High coverage: 8000
+SNP/INDEL Maximum coverage: 16383
+gVCF block absolute limit: 3
+gVCF block relative limit: 0.3
+gVCF block label: BLOCKAVG_min30p3a
+Input alignment file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/IntersectMappedReads/vWA_cA_15-0.5-3.minimap.sorted.bam_alignment.sorted.bam
+Reference file: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/testset/testCustomDB/vWA.fa
+Sample name: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-3.minimap.sorted.bam
+Prefix: /stornext/snfs5/next-gen/scratch/rupesh/ProjectFritz/forensic-project/strspy/test_results/SNVcalls/vWA_cA_15-0.5-3.minimap.sorted.bam
+Minimum SNP read mapping quality: 1
+Minimum INDEL read mapping quality: 1
+Found 31 regions
+Processing records for region vWA_[TAGA]7_[CAGA]3_TAGA_11:1-1044
+Processing records for region vWA_[TAGA]7_[CAGA]4_TAGA_12:1-1048
+Processing records for region vWA_[TAGA]8_[CAGA]4_TAGA_13:1-1052
+Processing records for region vWA_[TAGA]9_[CAGA]3_TAGA_13:1-1052
+Processing records for region vWA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]9_[CAGA]4_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]10_[CAGA]3_TAGA_14:1-1056
+Processing records for region vWA_[TAGA]10_[CAGA]4_TAGA_15:1-1060
+Processing records for region vWA_[TAGA]11_[CAGA]3_TAGA_15:1-1060
+Processing records for region vWA_TGGA_[TAGA]3_TGGA_[TAGA]3_[CAGA]4_TAGA_CAGA_TAGA_15:1-1060
+Processing records for region vWA_[TAGA]11_[CAGA]4_TAGA_16:1-1064
+Processing records for region vWA_[TAGA]12_[CAGA]3_TAGA_16:1-1064
+Processing records for region vWA_[TAGA]12_[CAGA]4_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]3_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]11_[CAGA]5_TAGA_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]4_17:1-1068
+Processing records for region vWA_[TAGA]13_[CAGA]4_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]14_[CAGA]3_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]11_[CAGA]6_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]12_[CAGA]5_TAGA_18:1-1072
+Processing records for region vWA_[TAGA]14_[CAGA]4_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]12_[CAGA]6_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]13_[CAGA]5_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]15_[CAGA]3_TAGA_19:1-1076
+Processing records for region vWA_[TAGA]15_[CAGA]4_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]14_[CAGA]5_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]13_[CAGA]6_TAGA_20:1-1080
+Processing records for region vWA_[TAGA]15_[CAGA]4_TAGT_20:1-1080
+Processing records for region vWA_[TAGA]14_[CAGA]6_TAGA_21:1-1084
+Processing records for region vWA_[TAGA]15_[CAGA]5_TAGA_21:1-1084
+Processing records for region vWA_[TAGA]16_[CAGA]4_TAGA_21:1-1084
+Finished
+#Counting Alleles...
+#Normalize with maximum value of Allele counts..
+#get top two Alleles by filtering norm value <= 0.4
+#Done.
+
+All Done.
+
+0 minutes and 11 seconds elapsed.
+
+#The log file also has created in your working directory
+

@@ -1,0 +1,2 @@
+TotalReads	IntersectMappedReads(Ratio)	UnmapedReads(Ration)
+21993	15800 (71.841%)	6193 (28.159%)

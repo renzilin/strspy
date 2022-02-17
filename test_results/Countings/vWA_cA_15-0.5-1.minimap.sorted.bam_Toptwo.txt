@@ -1,0 +1,3 @@
+Locus	Allele	NormalizedCounts
+vWA	18	1
+vWA	19	0.976744

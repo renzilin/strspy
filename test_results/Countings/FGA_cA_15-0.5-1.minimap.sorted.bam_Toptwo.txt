@@ -1,0 +1,3 @@
+Locus	Allele	NormalizedCounts
+FGA	21	1
+FGA	23	0.672727
